@@ -1,5 +1,6 @@
 import "@styles/globals.css"; //import css to enitre application
-
+import Nav from "@components/Nav";
+import Provider from "@components/Provider";
 export const metadata = {
   title: "PromptShare",
   description: "Discover & Share AI Prompts",
@@ -11,7 +12,10 @@ const Rootlayout = ({ children }) => {
         <div className="main">
           <div className="gradient" />
         </div>
-        <main className="app">{children}</main>
+        <main className="app">
+          <Nav />
+          {children}
+        </main>
       </body>
     </html>
   );
